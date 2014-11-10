@@ -1,0 +1,53 @@
+/* This file is loaded on all admin pages, so be specific! */
+
+select[disabled] {
+	color: #ADA9A5;
+}
+
+.column-thumbnail {
+	width: 80px;
+	text-align: center;
+}
+
+#featured-pricing {
+	width: auto;
+	margin: 16px 4px;
+}
+
+/* listing location meta box */
+#normal-sortables #listing-location.postbox #listing-map,
+#normal-sortables #listing-location.postbox #listing-find-on-map {
+	margin: 10px;
+}
+
+#normal-sortables #listing-location.postbox #listing-address {
+	width: 25em;
+}
+
+#normal-sortables #listing-location.postbox #listing-map {
+	width: 520px;
+	height: 300px;
+}
+
+#side-sortables #listing-location.postbox #listing-map {
+	width: 260px;
+	height: 260px;
+}
+
+#side-sortables #listing-location.postbox .form-table th {
+	padding: 10px 0;	
+}
+
+#side-sortables #listing-location.postbox .form-table td {
+	padding: 5px 0;	
+}
+
+#side-sortables #listing-location.postbox #listing-find-on-map {
+	margin: 10px 0;
+}
+
+.listing-gallery-info {
+	font: italic 10px sans-serif;
+	display: block;
+	color: #666;
+}

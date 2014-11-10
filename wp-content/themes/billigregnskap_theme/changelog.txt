@@ -1,0 +1,163 @@
+Changelog for 1.1.4-beta - Last updated 2013-01-22
+
+Make navigation menu responsive, becomes native select menu at smaller screen sizes.
+Add responsive styling to front end pages.
+Fix wp-admin created listings not showing in search results when results sorted by rating.
+Fix redirect when following the registration link on claim listing page.
+Fix bug to allow upgrades on claimed listing on free plan.
+Added prune now button for immediately expiring listings.
+Fix date formatting bug on wp-admin edit listing form.
+Fix bug for custom form not showing on create/edit listing on front end.
+
+Changelog for 1.1.3 - 2012-11-09
+
+Fix error when searching with no search term.
+Fix listing expiration, schedule featured expiration check for hourly.
+Format user contact fields in wp-admin listing edit listing.
+Fix date format to use WP setting on wp-admin listing edit in Pricing Information meta box.
+Fix search pagination error affecting multisite.
+Disallow children plans from being available to be chosen.
+Fix js error on wp-admin listing edit.
+use _n() instead of __ngettext() (deprecated WordPress function).
+Fix expiration of featured status.
+Add listing_duration field to csv importer.
+Add featured image to blog posts.
+Login/Register redirect setup if not logged and click Create Listing.
+Add language setting to Google Maps API usage.
+Allow listings w/o plan (created in wp-admin) to be upgraded.
+Fix upgrade listing error.
+Fix search sort by rating not including listings with 0 reviews.
+Fix dashboard pagination.
+Fix bug causing claimed accepting and subsequent order activation and plan data to get overidden by meta box values on wp-admin publish(accept).
+Option to geocode imported listings.
+Added units to listing duration meta boxes and pricing meta boxes.
+In the future, the pricing example should be updated to use the current currency.
+Fix slider rounding and sync slider value to actual sql distance used.
+Implement search options, default sorting, default radius.
+Cleanup reviews code.
+Listing form updates, fix bug with wp_tax_query on form submission.
+Fix Payments menu collapsed when editing plan.
+Update url with anchor to the tab so it's easy to link to business listings page tabs.
+Removed status headline hangers for dashboard favorties.
+Fix Favorite button text alignment and underline.
+Allow checkbox to disable emails generated during import.
+Fix purchase receipt email content, removing the duplicate links and providing purchase summary table.
+Fix purchase form to only take checked options from selected plan.
+Fix Sharethis misaligned when logged out.
+Updates to listing create/edit form to deal with image upload errors and other errors on edit listing.
+Make listing thumbnail clickable.
+Featured listings are now shown as featured in search.
+Change existing listing purchase text to show unlimited days.
+Change text showing featured can never expire.
+Format listing contact fields like webste, twitter, facebook.
+Fix listing expiration, now checks hourly.
+Admin can now change author to any user, including subscribers.
+
+Changelog for 1.1.2 - 2012-10-02
+
+Change display order for Popular Listings Categories widget.
+Add missed changes for term count fix.
+Fix javascript bug preventing clicking overview tab after submitting review, in Windows IE, FF, and Safari.
+Make map pin draggable in crete and edit listing pages.
+Fix broken author reviews link url
+Add Bank Transfer payment gateway.
+Fixed default pricing plan not being create during an upgrade.
+Fixed currency changes to be displayed properly.
+Fixed permalinks issues for dashboard and claimed listings in certain scenarios.
+Fixed tags not being able to be saved.
+Reviews now display line breaks to show paragraphs.
+Notes about base64 usage in CSS & link to FAQ.
+Changed "no expiration date" display from "0 days" to "Unlimited Days".
+Fixed bug disallowing puplishing a moderated listing. 
+Fixed bug disallowing accepting a moderated claimed listing.
+Can now quick edit listings as claimable from wp-admin.
+Can now bulk edit listings as claimable from wp-admin.
+Redirect after claimed listing no longer ends in listing not found page.
+Error returned if owner tries to claim their own listing.
+Upgrade listing no longer visible when charging is turned off.
+Pricing plans no longer increase the category count.
+Remove options text from pricing plan when no option available
+Fixed XSS vulnerability.
+Move search refinement preserving logic out of header template.
+Fixed problems with the language pack.
+Fixed fatal error on login page.
+
+Changelog for 1.1.1 - 2012-08-26
+
+Fixed issue with dissapearing images.
+
+Changelog for 1.1 - 2012-08-22
+
+Pricing Plans which offer multiple pricing options to be offered, and are connected to categories.
+Improved Location Search which now calculates a default radius from the location search term used.
+PDF Uploads are now available in custom forms.
+Automatic Updates via the AppThemes Updater plugin.
+Added option to show ShareThis on blog posts and listings.
+Add tooltips to admin settings.
+Added comments hooks.
+Added many AppThemes Hooks from our general API.
+Added new permalink options for many of Vantage's pages.
+Added new listing gallery manager metabox.
+Added Social connect plugin compatibility.
+Added Support for 3.4 flexible sized header images.
+Dashboard now lists a listing as infinite when there is no duration.
+Made many backend columns sortable.
+Added class and ids to custom fields on a single listing page.
+Removed 'va_upload_mimes' filter.
+Added current menu item styling.
+Removed the rolodex image when a custom header image is uploaded and used.
+Category lists, in the menu and the category page, now show up alphabetically instead of the order in which the were entered.
+Use help tips in admin instead of help tabs.
+Removed example functionality in child theme. 
+Lock category selection for existing listings.
+Added the ability for users to claim listings that have been marked as claimable by the admin and to moderate claimed listings.
+Added an Upgrade button to the edit listing page.
+Added ability to sort featured listings on home page by oldest, newest, or random.
+Removed ability to accept listings from the front end. Listings must be moderated in the back.
+Remote attachments and featured images will now correctly be imported and set.
+Owner can reply to their listing's reviews.
+Added the ability for users to favorite listings, which will add them to a list in their dashboard.
+Added AppThemes's Wrapping Support.
+Added Live Customizer Support for Color Scheme.
+Added option to set the number of listings per page.
+Added featured thumbnail to backend listing table.
+Featured listings will now paginate correctly on the front page/categories pages.
+Added the ability to turn on/off certain addons, as well as set their duration.
+Listings with 0 duration no longer expire.
+Added a new Payments menu for items having to do with checkout.
+Many CSS fixes and improvements.
+
+
+Changelog for 1.0.1 - 2012-06-15
+
+A barebones example child theme has been bundled for easily start a new child theme.
+The distance filter is now only shown if there's a geo query.
+Search terms are now listed at top of search results.
+Searches with no input will now return all listings, instead of blog results.
+Searches with no results now display the correct message
+Searches will now include a listing's category and tag names.
+Searches ordered by rating behave correctly.
+Many IE issues have been fixed.
+Many styling issues have been fixed.
+Theme color options are now separated into another Appearance group
+Colored stylesheets are automatically disabled when a child theme is being used.
+Ad widgets and sidebars are now available for listing pages.
+Custom forms are no longer counted in the category counters.
+Themed logins have been added
+Internationalization has been added to single-listing.php.
+Review counts and averages are no longer affected by replies.
+Javascript validation has been added to review/replies.
+Replied-to users no longer are prevented from seeing the reply to their review.
+A X-UA-Compatible header is now sent. 
+Added a geocoding request when the coordinates for a listing are missing
+Custom fields are now sanitized when saved
+Custom fields now allow safe HTML.
+Categories/Tags with no listings now display proper messages.
+Default map zoom now shows location at street level
+Comments now behave correctly when disabled.
+CSV files now correctly import 'status' columns
+Display listing category in admin list table.
+Listings Admin Table now displays the listing category and expire date 
+Orders now have their own statuses and their API has been updated
+Orders now are accessed via a new permalink structure.
+The Orders Admin Table has been revamped.

@@ -1,0 +1,2 @@
+[21-Sep-2014 05:36:45 Europe/Berlin] PHP Fatal error:  Call to undefined function get_blog_page_title() in /home/dodonydi/public_html/billigregnskap/wp-content/themes/billigregnskap_theme/index.php on line 7
+[21-Sep-2014 10:42:20 Europe/Berlin] PHP Fatal error:  Call to undefined function get_blog_page_title() in /home/dodonydi/public_html/billigregnskap/wp-content/themes/billigregnskap_theme/index.php on line 7

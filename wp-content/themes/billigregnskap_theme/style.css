@@ -1,0 +1,4021 @@
+/*
+Theme Name: Billigregnskap
+Version: 1.0
+Description: Billig Regnskap
+Theme URI: http://www.billigregnskap.no
+Author: Billig Regnskap
+Author URI: http://www.billigregnskap.no
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/*  =========== [ Default Stylesheet Table of Contents ] =========== */
+/*
+ * 1. Stylesheet Reset - Eric Meyer v2
+ * 2. Layout, General
+ * 3. Typography, General
+ * 4. Header
+ * 5. Middle Content
+ * 6. Main Content
+ * 7. Listings
+ * 8. Single Listing
+ * 9. Reviews
+ * 10. Single Page
+ * 11. Single Blog Post
+ * 12. Forms
+ * 13. Sidebar
+ * 14. 404 Page
+ * 15. Dashboard
+ * 16. Pricing Plans
+ * 17. Categories List
+ * 18. Footer
+ * 19. Admin Bar
+ * 20. IE Fixes
+ * 21. Responsive
+ */
+
+
+/*  =========== [ 1. Eric Meyer reset v2 | 20110126 ] =========== */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body{line-height:1}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+table{border-collapse:collapse;border-spacing:0}
+
+
+body {
+	height:100%;
+	color: #333;
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 0.75em;
+	font-weight: 300;
+	background: #E4E4E4 url('images/header-bg.png') repeat-x 0 0;
+	border-top:2px solid #DDD;
+}
+
+label {
+	cursor: pointer;
+}
+
+/* =========== [ 2. LAYOUT, GENERAL ] =========== */
+
+.container,
+.notice {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.row {
+	width: 100%;
+	max-width: 1140px;
+	min-width: 900px;
+	margin: 0 auto;
+}
+
+.rounded {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.rounded-small {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.rounded-t {
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.tb {
+	border: 1px solid #000;
+}
+
+.clear, br.clear {
+	clear: both;
+}
+
+.alignleft {
+	margin-right:15px;
+	float:left;
+}
+
+.alignright {
+	margin-left:15px;
+	float:right;
+}
+
+.wp-caption {
+	padding:10px 5px;
+	border:1px solid #CCC;
+	background: #efefef;
+	text-align:center;
+}
+
+.wp-caption-text {
+	margin:0;
+}
+
+/* =========== [ 3. TYPOGRAPHY, GENERAL ] =========== */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	font-family: "Open Sans";
+}
+
+h1 {
+	font-family: "Open Sans", Geneva, sans-serif;
+	font-weight: 700;
+	font-size:20px;
+}
+
+h2 {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-weight: 300;
+	margin:30px 0 20px;
+	font-size:18px;
+}
+
+h3 {
+	margin:20px 0 10px;
+	font-size:16px;
+}
+
+h4 {
+	margin:20px 0 10px;
+	font-size:13px;
+	font-weight:bold;
+}
+
+h5, h6 {
+	margin:20px 0 10px;
+}
+
+p {
+	margin-top: 10px;
+	line-height:18px;
+}
+
+strong {
+	font-weight: bold;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+	text-decoration: none;
+	font-family: "Open Sans";
+}
+
+a:hover {
+	font-weight: 400;
+}
+
+hr {
+	border:0;
+	border-top:1px solid #DDD;
+}
+
+li {
+	line-height:18px;
+}
+
+blockquote {
+	background:#fafafa;
+	border-left: 4px solid #333;
+	margin:1.5em 10px;
+	padding: 10px;
+	quotes:"\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+	color:#333;
+	content:open-quote;
+	font-size:4em;
+	font-weight: bold;
+	line-height:.1em;
+	margin-right:.25em;
+	vertical-align:-.4em;
+}
+
+blockquote p {
+	display:inline;
+}
+
+em {
+	font-style: italic;
+}
+
+small {
+	font-size: 0.8em;
+}
+
+/* =========== [ 4. HEADER ] =========== */
+
+#masthead .row {
+	margin-top:15px;
+	margin-bottom:25px;
+	position: relative;
+	overflow: hidden;
+}
+
+#site-title a {
+	width:400px;
+	height:70px;
+	margin:0 0 0 0px;
+	display:block;
+	background:url(images/vantage-logo.png) no-repeat 0 0;
+	text-indent:-9999px;
+}
+
+#site-description {
+	margin:0px;
+	color:#333;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:14px;
+	font-weight:normal;
+	-moz-text-shadow: 0 1px 0 #DDD;
+	-webkit-text-shadow: 0 1px 0 #DDD;
+	text-shadow: 0 1px 0 #DDD;
+	position: absolute;
+	top: 53px;
+	left: 82px;
+	z-index: 10;
+}
+
+#rounded-nav-box {
+	position:relative;
+/*	-moz-box-shadow: 0 1px 3px #666;
+	-webkit-box-shadow: 0 1px 3px #666;
+	box-shadow: 0 1px 3px #666; */
+	position:relative;
+}
+/*
+#rounded-nav-box-overlay {
+	background: transparent url('images/nav-box-overlay.png') no-repeat 0 5px;
+	overflow: visible;
+	margin-top: -5px;
+	padding-top: 5px;
+}
+*/
+#masthead .advert {
+	width: 468px;
+	height: 60px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#masthead .advert a img {
+	width: 468px;
+}
+
+#masthead .advert .textwidget{
+	margin: 0;
+}
+
+/* Navigation */
+
+#main-navigation .menu ul {
+	height: 38px;
+	background: transparent url('images/nav-bg.png') repeat 0 0;
+	overflow: visible;
+	margin: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	position:relative;
+	-moz-box-shadow: 0 1px 3px #666;
+	-webkit-box-shadow: 0 1px 3px #666;
+	box-shadow: 0 1px 1px #666;
+}
+
+#main-navigation .menu li {
+	float: left;
+	height: 38px;
+	position: relative;
+	top: 0;
+	border-right: 1px solid #000;
+	border-left: 1px solid #555;
+}
+
+#main-navigation .menu li a {
+	font-size: 13px;
+	font-weight:400;
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+	color: #ffffff;
+	padding: 11px 24px 0 24px;
+	margin: 0 0;
+	height: 27px;
+	top: 0;
+	display: block;
+	text-align: center;
+	text-shadow: 0 -1px 0px black;
+}
+
+#main-navigation .menu li.first {
+	border-left: none;
+}
+
+/* tinynav navigation menu */
+.tinynav {
+	width: 93.5%;
+	margin: 12px 2%;
+	display: none;
+}
+
+/* Dropdown navigation menu */
+#main-navigation .menu ul li ul.sub-menu {
+	display: none;
+}
+
+#main-navigation .menu ul li:hover ul.sub-menu {
+	display: block;
+}
+
+#main-navigation ul.sub-menu {
+	position: absolute;
+	z-index: 99;
+	background: -moz-linear-gradient(center top , #EEEEEE 52%, #CDCDCD 100%) repeat scroll 0 0 transparent;
+	-khtml-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+	height: auto;
+	width: 200px;
+	margin: 0 0 0 -6px;
+	border-left: 6px solid rgba(0, 0, 0, 0.5);
+	border-right: 6px solid rgba(0, 0, 0, 0.5);
+	border-bottom: 6px solid rgba(0, 0, 0, 0.5);
+	-moz-background-clip: border;
+	-webkit-background-clip: border;
+	background-clip: border-box;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding;
+	background-clip: padding-box;
+	-moz-background-clip: content;
+	-webkit-background-clip: content;
+	background-clip: content-box;
+}
+
+#main-navigation ul.sub-menu li {
+	float:left;
+	border: 0 none;
+	width: 100%;
+	border-bottom: 1px solid #E1E1E1;
+}
+
+#main-navigation ul.sub-menu li a {
+	padding: 11px 11px 0;
+	width: auto;
+	border: 0 none;
+}
+
+#main-navigation .menu ul li ul.sub-menu li ul.sub-menu {
+	display: none;
+	-khtml-border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+	border-top: 6px solid rgba(0, 0, 0, 0.5);
+	left: 200px;
+	top: 0;
+	margin: -6px 0 0 0;
+}
+
+#main-navigation .menu ul li ul.sub-menu li:hover ul.sub-menu {
+	display: block;
+}
+
+#main-navigation .menu ul li:first-child ul.sub-menu {
+	border-top: medium none !important;
+	-khtml-border-radius: 0 0 5px 5px !important;
+	-moz-border-radius: 0 0 5px 5px !important;
+	-webkit-border-radius: 0 0 5px 5px !important;
+	border-radius: 0 0 5px 5px !important;
+	margin: 0 !important;
+}
+
+#main-navigation .menu li:hover,
+#main-navigation .menu li.current-menu-item {
+	background-color: #777777;
+	border-right: 1px solid #777;
+	border-left: 1px solid #444;
+	border-top: 1px solid #444;
+
+
+}
+#main-navigation .menu li:first-child:hover,
+#main-navigation .menu li.current-menu-item:first-child {
+	-khtml-border-radius: 5px 0px 0px 5px;
+	-moz-border-radius: 5px 0px 0px 5px;
+	-webkit-border-radius: 5px 0px 0px 5px;
+	border-radius: 5px 0px 0px 5px;
+	border-right: 1px solid #777;
+	border-left: 1px solid #444;
+	border-top: 1px solid #444;
+	border-bottom: 1px solid #ccc;
+}
+
+/* Dropdown categories list */
+#main-navigation .adv_categories {
+	display: none;
+	position: absolute;
+	top: 38px;
+	left: 0;
+	z-index: 99;
+	background-color: #F3F3F3;
+	min-width: 675px;
+	border-left: 6px solid rgba(0, 0, 0, 0.5);
+	border-right: 6px solid rgba(0, 0, 0, 0.5);
+	border-bottom: 6px solid rgba(0, 0, 0, 0.5);
+	-moz-background-clip: border;
+	-webkit-background-clip: border;
+	background-clip: border-box;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding;
+	background-clip: padding-box;
+	-moz-background-clip: content;
+	-webkit-background-clip: content;
+	background-clip: content-box;
+	margin-left: -6px;
+}
+
+#main-navigation .menu li:hover .adv_categories {
+	display: block;
+}
+
+#main-navigation .adv_categories .catcol {
+	border-left: medium none;
+	float: left;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 0 10px 0 15px;
+	vertical-align: top;
+	width: 200px;
+}
+
+#main-navigation .adv_categories .catcol ul {
+	background: none repeat scroll 0 0 transparent;
+	-khtml-border-radius: 0 0 0 0;
+	-moz-border-radius: 0 0 0 0;
+	-webkit-border-radius: 0 0 0 0;
+	border-radius: 0 0 0 0;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-khtml-box-shadow: none;
+	box-shadow: none;
+	height: auto;
+	margin: 0;
+	overflow: hidden;
+	position: relative;
+}
+
+#main-navigation .adv_categories .catcol li {
+	border-left: medium none;
+	border-right: medium none;
+	float: left;
+	height: auto;
+	position: relative;
+	top: 0;
+}
+
+#main-navigation .adv_categories .catcol ul.maincat-list li {
+	background: url("images/gray-grad.png") repeat-x scroll left top transparent;
+	-khtml-border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+	margin: 5px 0 0;
+	width: 100%;
+}
+
+#main-navigation .adv_categories .catcol ul li.maincat a {
+	border-right: medium none;
+	color: #545454;
+	display: inline-block;
+	float: none;
+	font-weight: bold;
+	height: auto;
+	margin: 0;
+	padding: 5px 3px 5px 7px;
+	text-transform: uppercase;
+	text-align: left;
+	width: auto;
+}
+
+#main-navigation .adv_categories .catcol ul li.maincat a:hover {
+	text-decoration: underline;
+}
+
+#main-navigation .adv_categories .catcol ul.subcat-list {
+	margin-left: 10px;
+	margin-top: 2px;
+}
+
+#main-navigation .adv_categories .catcol ul.subcat-list li {
+	background: none repeat scroll 0 0 transparent;
+	margin: 0;
+}
+
+#main-navigation .adv_categories .catcol ul li.cat-item a {
+	background: none repeat scroll 0 0 transparent;
+	display: inline-block;
+	font-size: 12px;
+	text-transform: none;
+	line-height: 22px;
+	padding: 0;
+	width: auto;
+}
+
+#main-navigation .adv_categories .catcol ul li.cat-item a:hover {
+	text-decoration: underline;
+}
+
+
+/* Main Search */
+
+#main-search {
+	clear: both;
+	margin: 10px 0 0 0;
+	overflow:hidden;
+}
+
+.search-for, .search-location {
+	width:40%;
+	min-width:300px;
+	margin:0 0 16px 2%;
+	padding:0;
+	position:relative;
+	float:left;
+		background: white;
+	border: 1px solid #999;
+}
+
+#main-search .search-title {
+	font-size: 24px;
+	color: #fff;
+	text-shadow: 0px 1px 1px #000;
+	font-family:"Open Sans", Arial, Helvetica, sans-serif;
+}
+
+#main-search .search-help {
+	font-size: 11px;
+}
+
+#main-search input.text {
+	font-size: 18px;
+	color: #5e5e5e;
+	width: 92%;
+	border: none;
+	background: transparent;
+}
+
+#main-search .h39 {
+
+}
+
+#main-search .input-cont {
+	position: relative;
+}
+/*
+#main-search .input-cont .left {
+	float: left;
+	width: 7px;
+	background: transparent url('images/input-cont-left.png') no-repeat 0 0;
+}
+
+#main-search .input-cont .mid {
+	float: left;
+	width: 94%;
+	background: transparent url('images/input-cont-mid.png') repeat-x 0 0;
+}
+
+#main-search .input-cont .right {
+	float: left;
+	width: 7px;
+	background: transparent url('images/input-cont-right.png') no-repeat 0 0;
+}
+*/
+.search-button {
+	position:relative;
+	float:left;
+	margin-top: 6px;
+}
+
+#search-submit{
+	width: 100%;
+	min-width:110px;
+	height: 38px;
+	display: block;
+	margin: 0px 0 0 0;
+	padding: 0;
+	background: #666;
+	border: none;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 600;
+	font-style: italic;
+	font-family:"Open Sans", Arial, Helvetica, sans-serif;
+	text-shadow: 0px -2px 0 #000;
+	text-align: center;
+	line-height: 35px;
+	cursor: pointer;
+	cursor: hand;
+	margin-left: 8px;
+	margin-top: -4px;
+	border-bottom: 1px solid #222;
+	border-right: 1px solid #222;
+}
+
+/* Breadcrumbs */
+
+#breadcrumbs {
+	margin: 12px 0 50px 20px;
+}
+
+
+.breadcrumb-trail,
+.breadcrumb-trail a,
+.breadcrumb-trail a:link,
+.breadcrumb-trail a:visited,
+.breadcrumb-trail a:hover,
+.breadcrumb-trail span{
+	color: #59584f;
+	font-size: 12px;
+}
+
+/* =========== [ 5. MIDDLE AKA CONTENT ] =========== */
+
+#content {
+	background: #FAFAFA url('images/content-bg.png') repeat-x 0 0;
+	position:relative;
+}
+
+#content-mid {
+	min-height:100%;
+	position: relative;
+	top:-40px;
+	margin-top: 55px;
+	overflow: visible;
+	position:relative;
+	border:1px solid #bdbcbd;
+	outline: none;
+	margin-top: 0;
+	background: #ffffff url('images/bg-stage.png') repeat-y top right;
+}
+
+/* No sidebar for these pages, so remove the sidebar shadow */
+.va_listing_create #content-mid,
+.va_listing_edit #content-mid {
+	background: #ffffff;
+}
+
+#content-inner {
+	padding-right:305px;
+	background: url('images/bg-stage-shade.png') repeat-x 0 0;
+	position:relative;
+	background: #ededed;
+	-moz-box-shadow: 1px 1px 1px #DDD;
+	-webkit-box-shadow: 1px 1px 1px #000;
+	box-shadow: 1px 1px 1px #eee;
+	border-top: 1px solid #fff;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #fff;
+}
+
+/* =========== [ 6. MAIN CONTENT ] =========== */
+
+#main {
+	width:100%;
+	position: relative;
+	padding:0;
+	float:left;
+	word-wrap: break-word;
+}
+
+/* Main Content Global Elements */
+
+#main .section-head {
+	height: 40px;
+	margin: 16px 0 30px 0;
+	position: relative;
+	left: -14px;
+	display: inline-block;
+	border: 1px solid #CFCFCF;
+	background: #F5F5F5; /* for non-css3 browsers */
+	/*
+	 * Why base64?
+	 * 
+	 * In a nutshell, it's being used to render gradients and rounded corners together for IE9 and older. You can read more here:
+	 * http://www.appthemes.com/support/faq/#css-base64
+	 */
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImcyMzkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNFREVERUQiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2cyMzkpIiAvPgo8L3N2Zz4=);
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#ededed)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #ffffff,  #ededed); /* for firefox 3.6+ */
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-moz-border-radius-bottomright: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	-moz-box-shadow: 1px 1px 1px #DDD;
+	-webkit-box-shadow: 1px 1px 1px #DDD;
+	box-shadow: 1px 1px 1px #DDD;
+}
+
+#main .section-head h1 {
+	margin:0;
+	padding: 8px 27px 18px 27px;
+	color: #666;
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 20px;
+	font-weight:300;
+	line-height: 24px;
+	-moz-text-shadow: 0 1px 0 #FFF;
+	-webkit-text-shadow: 0 1px 0 #FFF;
+	text-shadow: 0 1px 0 #FFF;
+	background: url('images/left-hanger-triangle.png') no-repeat 0% 98%;
+	position: relative;
+}
+
+#main .section-head h2 {
+	margin:0;
+	padding: 9px 27px 19px 42px;
+	color: #666;
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 18px;
+	font-weight:300;
+	-moz-text-shadow: 0 1px 0 #FFF;
+	-webkit-text-shadow: 0 1px 0 #FFF;
+	text-shadow: 0 1px 0 #FFF;
+	background: url('images/left-hanger-triangle.png') no-repeat 0% 98%;
+	position: relative;
+}
+
+#main article .section-head {
+	left:-42px;
+}
+
+/* Ratings Stars */
+
+.stars {
+	width: 78px;
+	height: 14px;
+}
+.stars-0 {
+	background: transparent url('images/stars-0.png') no-repeat 0 0;
+}
+.stars-1 {
+	background: transparent url('images/stars-1.png') no-repeat 0 0;
+}
+.stars-1_5 {
+	background: transparent url('images/stars-1.5.png') no-repeat 0 0;
+}
+.stars-2 {
+	background: transparent url('images/stars-2.png') no-repeat 0 0;
+}
+.stars-2_5 {
+	background: transparent url('images/stars-2.5.png') no-repeat 0 0;
+}
+.stars-3 {
+	background: transparent url('images/stars-3.png') no-repeat 0 0;
+}
+.stars-3_5 {
+	background: transparent url('images/stars-3.5.png') no-repeat 0 0;
+}
+.stars-4 {
+	background: transparent url('images/stars-4.png') no-repeat 0 0;
+}
+.stars-4_5 {
+	background: transparent url('images/stars-4.5.png') no-repeat 0 0;
+}
+.stars-5 {
+	background: transparent url('images/stars-5.png') no-repeat 0 0;
+}
+
+/* notifications */
+
+.notice span {
+	margin:25px 5px 0 5px;
+	padding:15px 15px 15px 45px;
+	border:1px solid #999;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	font-weight:bold;
+	display:block;
+}
+
+.notice.extra {
+	margin-bottom:35px;
+}
+
+.notice.success span {
+	border:1px solid #38C838;
+	background:#CFC url(images/icon-tick.png) no-repeat 12px 50%;
+}
+
+.notice.success-pending span {
+	border:1px solid #E6DB55;
+	background:#FFFBCC url(images/icon-exclamation.png) no-repeat 12px 50%;
+}
+
+.notice.error span {
+	border:1px solid #F00;
+	background:#FCC url(images/icon-exclamation.png) no-repeat 12px 50%;
+}
+
+.notice.error span a {
+	color:#C00;
+}
+
+input.error,
+select.error,
+textarea.error {
+	outline: 2px solid #FCC;
+}
+
+label.error {
+	display: block;
+	outline: 2px solid #FCC;
+	background-color: #FCC;
+	padding: 3px;
+	margin-top: 6px;
+}
+
+.expired-notice {
+	margin:15px 0 0 0;
+	padding:8px;
+	overflow:hidden;
+	position:relative;
+	background:#FFCCCB;
+	color:#C00;
+	font-size:16px;
+	font-weight:bold;
+}
+
+.expired-notice .listing-edit-link {
+	margin:0;
+	position:absolute;
+	top:6px;
+	right:6px;
+	color:#C00;
+	text-transform:uppercase;
+}
+
+/* pagination */
+
+.pagination {
+	margin:30px 0 35px 0;
+	text-align:center;
+}
+
+.pagination .page-numbers {
+	width:28px;
+	margin:0 2px;
+	padding:5px 0;
+	border:1px solid #CCC;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	display:inline-block;
+	background: #EEE; /* for non-css3 browsers */
+	/*
+	 * Why base64?
+	 * 
+	 * In a nutshell, it's being used to render gradients and rounded corners together for IE9 and older. You can read more here:
+	 * http://www.appthemes.com/support/faq/#css-base64
+	 */
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImcyMzkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNFREVERUQiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2cyMzkpIiAvPgo8L3N2Zz4=);
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#EEEEEE)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #ffffff,  #EEEEEE); /* for firefox 3.6+ */
+	text-align:center;
+}
+
+.pagination .dots {
+	width:20px;
+	margin:0;
+	border:0;
+	background:none;
+	font-weight:bold;
+}
+
+.pagination .next, .pagination .prev {
+	width:auto;
+	padding:5px 8px;
+}
+
+/* =========== [ 7. LISTINGS ] =========== */
+
+article.listing {
+	margin:14px 26px;
+	padding: 25px 10px 25px 76px;
+	position: relative;
+	border-bottom: 1px solid #E5E5E5;
+	background: #fff;
+	border: none;
+	-khtml-border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	-moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+	text-shadow: 0 -1px 0px #fff;
+}
+
+article.post {
+	clear: both;
+	margin: 0 25px;
+	border-top: 1px solid #E5E5E5;
+}
+
+/* for listings in dashboard + home */
+article.listing img {
+	padding:3px;
+	border:1px solid #CCC;
+	background-color:#FFF;
+	position:absolute;
+	top:26px;
+	left:5px;
+	max-width: 50px;
+}
+
+/* for single listings*/
+.single .list article.listing img {
+	padding:3px;
+	border:1px solid #CCC;
+	background-color:#FFF;
+	position:absolute;
+	top:26px;
+	left:10px;
+}
+
+article.post img,
+article.page img {
+	padding:3px;
+	border:1px solid #CCC;
+	background-color:#FFF;
+}
+
+article > h2 {
+	margin:0 0 6px 0;
+	font-family:"Open Sans", Geneva, sans-serif;
+	font-size: 22px;
+	font-weight: 300;
+	float: left;
+	text-transform: capitalize;
+}
+
+.single-post article.post .post-heading {
+	padding: 0px 27px 6px 0;
+	line-height: 24px;
+	font-family:"Open Sans", Geneva, sans-serif;
+	font-weight: 300;
+	top: 0;
+	height: 33px;
+	-moz-text-shadow: 0 1px 0 #FFF;
+	-webkit-text-shadow: 0 1px 0 #FFF;
+	text-shadow: 0 1px 0 #fff;
+	position: relative;
+	display: inline-block;
+}
+
+article.post .post-heading a,
+article.post .post-heading .left-hanger {
+	display: block;
+	margin: 0;
+	padding: 10px 0;
+	font-family: "Open Sans", Geneva, sans-serif;
+	font-weight: 300;
+	line-height: 20px;
+	-moz-text-shadow: 0 1px 0 #FFF;
+	-webkit-text-shadow: 0 1px 0 #FFF;
+	text-shadow: 0 1px 0 #FFF;
+}
+
+article.post a.comment-count {
+	background: transparent url(images/comment-count.png) no-repeat;
+	float: right;
+	margin-top: 13px;
+	height: 27px;
+	width: 37px;
+	line-height: 27px;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+}
+
+article.post span.comment-count {
+	display: none;
+}
+
+section.overview {
+	clear: both;
+}
+
+article.post small {
+	color: #a9a9a9;
+	padding: 8px 0 8px 20px;
+	margin: 10px 0 30px 0;
+	width: 100%;
+	display: block;
+	font-size: 1em;
+	overflow: hidden;
+	background: transparent url(images/icon-meta-date.png) no-repeat 0 8px;
+}
+
+.single-post article.post small {
+	margin: 10px 0 20px 0;
+}
+
+article.post small a[rel=author] {
+	padding-left: 20px;
+	margin-left: 5px;
+	background: transparent url(images/icon-meta-author.png) no-repeat top left;
+}
+
+article.post small ul.post-categories {
+	background: transparent url(images/icon-meta-categories.png) no-repeat bottom left;
+	max-width: 450px;
+	display: block;
+	margin: 0 20px;
+	padding-left: 20px;
+	float: right;
+	list-style-type: none;
+}
+
+.single-post article.post small .post-categories li,
+article.post small .post-categories li {
+	list-style-type: none;
+	float: left;
+	margin: 0 4px;
+}
+
+.single-post article.post h3#comments {
+	clear: both;
+	border-top: 1px solid #DDD;
+	padding-top: 20px;
+}
+
+article.listing p.listing-cat {
+	clear: both;
+}
+
+article.listing p.listing-cat,
+article.listing p.listing-phone {
+	margin:0 16px 0 0;
+	color:#888;
+	float: left;
+}
+
+article.listing p.listing-address {
+	margin:0;
+	clear:left;
+}
+
+article.listing .review-meta {
+	width:260px;
+	float: right;
+}
+
+article.listing .review-meta p {
+	margin: 0;
+	float: right;
+	color: #333;
+	font-size: 11px;
+	font-style: italic;
+}
+
+article.listing .review-meta .stars-cont {
+	float: right;
+	margin-left:10px;
+}
+
+article.post ul {
+	margin: 10px 40px;
+	list-style-type: disc;
+}
+
+article.post ol {
+	margin: 10px 40px;
+	list-style-type: decimal;
+}
+
+/* ShareThis */
+
+.listing-sharethis {
+	float: right;
+}
+
+.listing-share { 
+	clear: both;
+}
+
+/* Featured */
+
+article.listing.featured {
+	margin:0;
+	padding: 25px 36px 25px 102px;
+}
+
+article.listing.featured img {
+	left:26px;
+}
+
+#main .featured-head {
+	height: 20px;
+	display:inline-block;
+	position: absolute;
+	left: -14px;
+	top:-12px;
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-moz-border-radius-bottomright: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+#main .featured-head h3 {
+	margin:0;
+	padding: 2px 27px 12px 27px;
+	font-size: 14px;
+	font-weight:bold;
+	line-height: 16px;
+	background: url('images/left-hanger-triangle.png') no-repeat 0% 98%;
+}
+
+/* For Claiming Listings */
+.claim-listing {
+	margin: 28px;
+}
+
+
+/* =========== [ 8. SINGLE LISTING ] =========== */
+
+.single-listing article.listing {
+	padding: 24px 28px 70px 28px;
+	margin:0;
+	border: 0;
+	position:relative;
+}
+
+.single-listing article.listing h1 {
+	margin-bottom:15px;
+	font-family:"Open Sans", Arial, sans-serif;
+	font-size:20px;
+	font-weight:300;
+}
+
+.single-listing article.listing h1 a {
+	color:#333;
+	text-decoration:none;
+}
+
+.single-listing article.listing ul {
+	margin:10px 0;
+}
+
+.author {
+	display:inline-block;
+}
+
+/* single listing stars */
+
+.single-listing article.listing .stars-cont {
+	margin:1px 10px 0 0;
+	float:left;
+	list-style-type:none;
+}
+
+.single-listing article.listing .author {
+	margin-bottom:3px;
+	position:relative;
+	top:-10px;
+}
+
+.single-listing article.listing .reviews {
+	color:#999;
+	font-style:italic;
+	margin:0;
+}
+
+/* social "follow" links */
+
+#listing-follow {
+	overflow: hidden;
+	margin: 10px 0;
+}
+
+#listing-follow p {
+	width:44px;
+	float: left;
+	margin: 0 5px 0 0;
+}
+
+#listing-follow a {
+	text-decoration: none;
+}
+
+#listing-follow a:hover {
+	text-decoration: none;
+}
+
+#listing-follow .twitter-handle {
+	font-weight:bold;
+	font-style: italic;
+}
+
+.facebook-icon,
+.twitter-icon {
+	width:16px;
+	height:16px;
+	float: left;
+	margin: 0 4px 0 0;
+	text-indent:-9999px;
+}
+
+.facebook-icon {
+	background: transparent url('images/tiny-facebook-icon.png') no-repeat 0 0;
+}
+
+.twitter-icon {
+	background: transparent url('images/tiny-twitter-icon.png') no-repeat 0 0;
+}
+
+/* Custom field data */
+
+.listing-fields {
+	margin: 15px 0;
+	overflow: hidden;
+}
+
+.listing-fields p {
+	margin:0;
+}
+
+/* Action buttons: Edit Listing, Favorites */
+
+.single-listing article.listing .listing-actions {
+	overflow: hidden;
+	margin: 15px 0;
+}
+
+a.listing-edit-link {
+	float:left;
+	font-size: 11px;
+	font-weight:bold;
+	font-style:italic;
+	color: #666;
+	border: 1px solid #CCC;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 5px 8px;
+	margin:0 10px 0 0;
+	background: #FFF; /* for non-css3 browsers */
+	/*
+	 * Why base64?
+	 * 
+	 * In a nutshell, it's being used to render gradients and rounded corners together for IE9 and older. You can read more here:
+	 * http://www.appthemes.com/support/faq/#css-base64
+	 */
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImcyMzkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNFREVERUQiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2cyMzkpIiAvPgo8L3N2Zz4=);
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #FFF,  #EEE); /* for firefox 3.6+ */
+}
+
+a.listing-fave-link,
+a.listing-unfave-link {
+	display: none;
+	float:left;
+	font-size: 11px;
+	line-height: 16px;
+	font-weight:bold;
+	font-style:italic;
+	color: #666;
+	border: 1px solid #CCC;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 3px 8px;
+	background: #FFF; /* for non-css3 browsers */
+	/*
+	 * Why base64?
+	 * 
+	 * In a nutshell, it's being used to render gradients and rounded corners together for IE9 and older. You can read more here:
+	 * http://www.appthemes.com/support/faq/#css-base64
+	 */
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImcyMzkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNFREVERUQiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2cyMzkpIiAvPgo8L3N2Zz4=);
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #FFF,  #EEE); /* for firefox 3.6+ */
+}
+
+
+a.listing-claim-link {
+	float:left;
+	font-size: 11px;
+	font-weight:bold;
+	font-style:italic;
+	color: #666;
+	border: 1px solid #CCC;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 5px 8px;
+	margin:0 10px 0 0;
+	background: #FFF; /* for non-css3 browsers */
+	/*
+	 * Why base64?
+	 * 
+	 * In a nutshell, it's being used to render gradients and rounded corners together for IE9 and older. You can read more here:
+	 * http://www.appthemes.com/support/faq/#css-base64
+	 */
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImcyMzkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNFREVERUQiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2cyMzkpIiAvPgo8L3N2Zz4=);
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #FFF,  #EEE); /* for firefox 3.6+ */
+}
+
+.listing-faves .fave-button .fave-icon {
+	padding-left: 25px;
+	float: left;
+	height: 16px;
+}
+
+.fave-icon.listing-fave {
+	background: transparent url('images/add-fave.png') no-repeat;
+}
+
+.fave-icon.listing-unfave {
+	background: transparent url('images/remove-fave.png') no-repeat;
+}
+
+.fave-icon.processing-fave {
+	background: transparent url('images/processing.gif') no-repeat;
+}
+
+div.content-listing.listing-faves .fave-button {
+	margin-top: 10px;
+	float: right;
+}
+
+div.single-listing.listing-faves .fave-button {
+	margin-right: 5px;
+}
+
+.single-listing article.listing hr {
+	clear:both;
+	margin:20px 0 15px 0;
+}
+
+.single-listing .tags span {
+	font-weight: bold;
+	font-size: 12px;
+	color: #888;
+}
+
+/* Listing Images */
+
+#listing-images {
+	margin: 0 0 24px 0;
+	padding:4px;
+	border:1px solid #DDD;
+	float: right;
+	background:#FFF;
+	overflow:hidden;
+}
+
+#listing-images .larger {
+	padding:6px 8px;
+	border-bottom:1px solid #CBCBCB;
+	display:block;
+	background:#EFEFEF;
+}
+
+#listing-images .larger img {
+	padding:5px;
+	border:1px solid #BDBCBD;
+	background:#FFF;
+	left: 0;
+	top: 0;
+	max-width: inherit;
+	position: relative;
+}
+
+#listing-images .smaller {
+	margin-top: 1px;
+	padding:6px 8px;
+	display:block;
+	background:#EFEFEF;
+}
+
+#listing-images .smaller img {
+	padding: 2px;
+	border: 1px solid #BDBCBD;
+	background: white;
+	left: 0;
+	top: 0;
+	max-width: inherit;
+	position: relative;
+}
+
+#listing-images .smaller a + a {
+	margin-left: 5px;
+}
+
+/* Listing Files */
+
+#listing-files {
+	margin: 0 0 24px 0;
+	padding: 4px;
+	overflow: hidden;
+	width: 100%;
+	min-height: 25px;
+}
+
+.listing-files {
+	margin-top: 15px;
+}
+
+.file-extension {
+	margin: 5px 0;
+}
+
+.file-extension a {
+	margin-left: 20px;
+}
+
+.file-extension.file-pdf {
+	background: url('images/file-pdf.png') no-repeat;
+}
+
+.file-extension.file-word {
+	background: url('images/file-word.png') no-repeat;
+}
+
+.file-extension.file-excel {
+	background: url('images/file-excel.png') no-repeat;
+}
+
+.file-extension.file-image {
+	background: url('images/file-image.png') no-repeat;
+}
+
+.file-extension.file-other {
+	background: url('images/file-other.png') no-repeat;
+}
+
+/* Listing Tabs */
+
+#listing-tabs {
+	clear: both;
+	margin-top:30px;
+}
+
+#listing-tabs .tabs {
+	height: 37px;
+	margin-top: 20px;
+	border-bottom: 1px solid #CECECE;
+	margin-left: -26px;
+}
+
+#listing-tabs section {
+	border-top: 1px solid #CFCFCF;
+	padding: 10px 0;
+}
+
+#listing-tabs #overview,
+#listing-tabs #reviews {
+	border-top: none;
+}
+
+#listing-tabs #reviews {
+	display: none;
+}
+
+#listing-tabs .tabs a {
+	display: block;
+	float: left;
+	padding: 10px 30px;
+	margin-left: 3px;
+	border: 1px solid #CFCFCF;
+	-moz-border-radius: 3px 3px 0px 0px;
+	-webkit-border-radius: 3px 3px 0px 0px;
+	border-radius: 3px 3px 0px 0px;
+	text-decoration: none;
+	color: #696969;
+	font-size: 14px;
+	background: #e3e3e3;
+	/*
+	 * Why base64?
+	 * 
+	 * In a nutshell, it's being used to render gradients and rounded corners together for IE9 and older. You can read more here:
+	 * http://www.appthemes.com/support/faq/#css-base64
+	 */
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImcyMDgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNFM0UzRTMiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNFRUVFRUUiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2cyMDgpIiAvPgo8L3N2Zz4=);
+	background: -moz-linear-gradient(top,  #e3e3e3 0%, #eeeeee 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e3e3e3), color-stop(100%,#eeeeee));
+	background: -webkit-linear-gradient(top,  #e3e3e3 0%,#eeeeee 100%);
+	background: -o-linear-gradient(top,  #e3e3e3 0%,#eeeeee 100%);
+	background: -ms-linear-gradient(top,  #e3e3e3 0%,#eeeeee 100%);
+	background: linear-gradient(top,  #e3e3e3 0%,#eeeeee 100%);
+}
+
+#listing-tabs .tabs a:hover {
+	background: #eeeeee;
+	/*
+	 * Why base64?
+	 * 
+	 * In a nutshell, it's being used to render gradients and rounded corners together for IE9 and older. You can read more here:
+	 * http://www.appthemes.com/support/faq/#css-base64
+	 */
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc0MzkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNFRUVFRUUiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNFM0UzRTMiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c0MzkpIiAvPgo8L3N2Zz4=);
+	background: -moz-linear-gradient(top,  #eeeeee 0%, #e3e3e3 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#e3e3e3));
+	background: -webkit-linear-gradient(top,  #eeeeee 0%,#e3e3e3 100%);
+	background: -o-linear-gradient(top,  #eeeeee 0%,#e3e3e3 100%);
+	background: -ms-linear-gradient(top,  #eeeeee 0%,#e3e3e3 100%);
+	background: linear-gradient(top,  #eeeeee 0%,#e3e3e3 100%);
+}
+
+#listing-tabs .tabs a.active-tab {
+	background: none;
+	border-bottom: 1px solid #fff;
+	background: #fff;
+	margin-bottom: -1px;
+}
+
+#listing-tabs .tabs a.first {
+	margin-left: 26px;
+}
+
+#listing-tabs .tabs a#add-your-review-button {
+	float: right;
+	font-size: 11px;
+	font-weight:bold;
+	font-style:italic;
+	color: #666;
+	border:1px solid #CCC;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 3px 8px 8px 13px;
+	background: #FFF; /* for non-css3 browsers */
+	/*
+	 * Why base64?
+	 * 
+	 * In a nutshell, it's being used to render gradients and rounded corners together for IE9 and older. You can read more here:
+	 * http://www.appthemes.com/support/faq/#css-base64
+	 */
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImcyMzkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNFREVERUQiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2cyMzkpIiAvPgo8L3N2Zz4=);
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #FFF,  #EEE); /* for firefox 3.6+ */
+}
+
+#listing-tabs .tabs a#add-your-review-button div {
+	width: 15px;
+	height: 15px;
+	background: transparent url('images/add-review-plus.png') no-repeat 0 0;
+	display: inline-block;
+	position: relative;
+	top: 4px;
+	left: -4px;
+}
+
+#review-rating img {
+	padding: 0;
+	border: none;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+/* =========== [ 9. REVIEWS ] =========== */
+
+#reviews {
+
+}
+
+#reviews .review {
+	margin-top: 25px;
+}
+
+#reviews .review .review-meta {
+	width: auto;
+	float: none;
+	overflow: hidden;
+	padding-bottom: 12px;
+	margin-bottom: 12px;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+#reviews .review .review-meta .review-author {
+
+}
+
+#reviews .review .review-meta .review-author img.avatar {
+	padding: 1px;
+	margin-right: 12px;
+	border: 1px solid #BDBCBD;
+	float: left;
+	position: relative;
+	top: 0;
+	left: 0;
+	max-width: inherit;
+}
+
+#reviews .review .review-meta .review-author .review-author-meta {
+	float: left;
+	margin:2px 0;
+	font-size:11px;
+}
+
+#reviews .review .review-meta .review-author .review-author-meta li {
+	line-height:15px;
+}
+
+#reviews .review .review-meta .review-author .review-author-reply {
+	position: relative;
+	margin:5px 2px;
+	float: right;
+}
+
+#reviews .review .review-meta .review-author .review-author-reply a.reply-link {
+	float:left;
+	font-size: 11px;
+	font-weight:normal;
+	font-style:italic;
+	text-decoration: none;
+	color: #666;
+	border: 1px solid #CCC;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 5px 8px;
+	margin:0 10px 0 0;
+	background: #FFF; /* for non-css3 browsers */
+	/*
+	 * Why base64?
+	 * 
+	 * In a nutshell, it's being used to render gradients and rounded corners together for IE9 and older. You can read more here:
+	 * http://www.appthemes.com/support/faq/#css-base64
+	 */
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImcyMzkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNFREVERUQiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2cyMzkpIiAvPgo8L3N2Zz4=);
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #FFF,  #EEE); /* for firefox 3.6+ */
+	cursor: pointer;
+}
+
+#reply-review-form {
+	display: none;
+	background: #fefefe;
+	margin: 10px 0;
+	padding: 10px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+#reviews .review .review-content {
+	border-bottom: 1px solid #CECECE;
+	padding-bottom: 25px;
+}
+
+#reviews .review .review-content .stars-cont {
+	float: left;
+}
+
+#reviews .review .review-content p {
+	margin: 10px 0 0 0;
+	color: #383838;
+	font-size: 12px;
+}
+
+#reviews .review .review-content .review-date {
+	float: left;
+	margin: 0 0 0 5px;
+	color: #BDBCBD;
+	font-size: 12px;
+	font-style: italic;
+}
+
+#reviews .review-reply {
+	color: #797979;
+	margin: 10px 0 0 25px;
+	background: transparent url('images/review-reply-arrow.png') no-repeat 0 0;
+}
+
+#reviews .review .review-content .review-reply p {
+	margin: 0 0 0 45px;
+	padding: 0;
+	font-size: 12px;
+	color: #797979;
+}
+
+#reviews .review .review-content .review-reply p.review-reply-author {
+	font-weight: bold;
+	padding-top: 18px;
+	padding-bottom: 25px;
+}
+
+#add-review-form label {
+	color:#8A8A8A;
+}
+
+#review-rating {
+	margin:10px 0;
+}
+
+#add-review-form label.error {
+	margin-bottom:20px;
+}
+
+#add-review-form textarea,
+#reply-review-form textarea {
+	width: 90%;
+	max-width:500px;
+	height:150px;
+}
+
+#add-review-form input[type=submit],
+#reply-review-form input[type=submit] {
+	margin: 30px 0 0 0;
+}
+
+/* =========== [ 10. SINGLE PAGE ] =========== */
+
+.page article.page {
+	padding: 24px 28px 70px 28px;
+	margin:0;
+	border: 0;
+	position:relative;
+}
+
+.page article.page h1 {
+	margin-bottom:15px;
+	font-family:"Open Sans", Arial, sans-serif;
+	font-size:32px;
+	font-weight:300;
+}
+
+.page article.page h1 a {
+	color:#333;
+	text-decoration:none;
+}
+
+.page article.page ul, .page article.page ol {
+	margin:10px 40px;
+}
+
+.page article.page ul li {
+	list-style-type:disc;
+}
+
+.page article.page ol li {
+	list-style-type: decimal;
+}
+
+.page article.page img {
+	padding:3px;
+	border:1px solid #CCC;
+	background-color:#FFF;
+}
+
+.page-template-create-listing-php.not-logged-in #content #main p {
+	padding: 20px;
+	width: 795px;
+	margin-top: 0;
+}
+
+/* =========== [ 11. SINGLE BLOG POST ] =========== */
+
+.single-post article.post {
+	padding: 24px 28px 70px 28px;
+	margin:0;
+	border: 0;
+	position:relative;
+}
+
+.single-post article.post h1 a {
+	color:#333;
+	text-decoration:none;
+}
+
+.single-post article.post .sharethis {
+	margin: 15px 0;
+}
+
+.single-post article.post ul {
+	margin:10px 40px;
+}
+
+.single-post article.post ul li {
+	list-style-type:disc;
+}
+
+.single-post article.post ol {
+	margin:10px 40px;
+}
+
+.single-post article.post ol li{
+	list-style-type: decimal;
+}
+
+.single-post article.post ol.commentlist {
+	margin: 20px 0 0;
+}
+
+.single-post article.post ol.commentlist li {
+	list-style-type: none;
+	padding: 10px 10px 0 10px;
+	clear: both;
+	overflow: hidden;
+	border-top: 1px solid #ddd;
+}
+
+.single-post article.post ol.commentlist li.odd {
+	border-top: 1px solid #ddd;
+}
+
+.single-post article.post ol.commentlist li ul {
+	margin:10px 0 0 40px;
+}
+
+.single-post article.post ol.commentlist li ul li {
+	padding-right: 0;
+	padding-bottom: 0;
+}
+
+.commentlist .comment-author {
+	float: left;
+	margin-right: 20px;
+}
+
+.commentlist .comment-author .says {
+	display: none;
+}
+
+.commentlist .comment-body {F
+	overflow: hidden;
+}
+
+.commentlist .comment-author img,
+.commentlist .comment-author cite {
+	float: left;
+	margin: 0 20px 0 0;
+	padding: 0;
+	text-transform: capitalize;
+}
+
+.commentlist .comment-body .comment-meta {
+	float: right;
+}
+
+.commentlist .comment-body .comment-meta a {
+	text-decoration: none;
+}
+
+.commentlist .comment-body p {
+	clear: both;
+	margin: 0 0 10px 55px;
+	float: left;
+}
+
+.commentlist .comment-body .reply {
+	clear: both;
+	float: left;
+	margin: 0 0 10px 55px;
+}
+
+#respond h3 {
+	border-top: 1px solid #DDD;
+	padding-top: 20px;
+}
+
+#respond small {
+	background: none;
+	margin: 0;
+	padding: 0;
+}
+
+#cancel-comment-reply {
+	display: none;
+}
+
+#commentform {
+	width: 100%;
+}
+
+#commentform p {
+	overflow: hidden;
+}
+
+#commentform input {
+	clear: both;
+	float: left;
+}
+
+#commentform label {
+	float: left;
+}
+
+#commentform span.required {
+	font-weight: bold;
+	padding: 3px;
+}
+
+#commentform label small {
+	border: none;
+	padding: 0;
+	margin: 0;
+	width: inherit;
+	display: inline;
+	background: transparent;
+}
+
+.edit-link a {
+	font-size: 11px;
+	font-weight:bold;
+	font-style:italic;
+	color: #666;
+	border: 1px solid #CCC;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 5px 8px;
+	margin:0 10px 0 0;
+	background: #FFF; /* for non-css3 browsers */
+	/*
+	 * Why base64?
+	 * 
+	 * In a nutshell, it's being used to render gradients and rounded corners together for IE9 and older. You can read more here:
+	 * http://www.appthemes.com/support/faq/#css-base64
+	 */
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImcyMzkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNFREVERUQiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2cyMzkpIiAvPgo8L3N2Zz4=);
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #FFF,  #EEE); /* for firefox 3.6+ */
+}
+
+
+/* =========== [ 12. FORMS ] =========== */
+
+form {
+	position:relative;
+}
+
+fieldset {
+	position:relative;
+}
+
+legend {
+	position:relative;
+}
+
+input[type=text],
+input[type=password] {
+	height: 18px;
+	margin: 6px 0;
+	padding: 5px;
+	background: #F4F4F4; /* for non-css3 browsers */
+	/*
+	 * Why base64?
+	 * 
+	 * In a nutshell, it's being used to render gradients and rounded corners together for IE9 and older. You can read more here:
+	 * http://www.appthemes.com/support/faq/#css-base64
+	 */
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc5ODAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGNEY0RjQiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c5ODApIiAvPgo8L3N2Zz4=);
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#F4F4F4)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #ffffff,  #F4F4F4); /* for firefox 3.6+ */
+	border: 1px solid #C2C1C2;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #5E5E5E;
+	font-size: 13px;
+}
+
+textarea {
+	width: 98%;
+	height: 100px;
+	margin: 6px 0 0;
+	padding: 5px;
+	background: #F4F4F4; /* for non-css3 browsers */
+	/*
+	 * Why base64?
+	 * 
+	 * In a nutshell, it's being used to render gradients and rounded corners together for IE9 and older. You can read more here:
+	 * http://www.appthemes.com/support/faq/#css-base64
+	 */
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc5ODAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGNEY0RjQiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c5ODApIiAvPgo8L3N2Zz4=);
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#F4F4F4)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #ffffff,  #F4F4F4); /* for firefox 3.6+ */
+	border: 1px solid #C2C1C2;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #5E5E5E;
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+:focus {
+	outline: none;
+}
+
+label {
+	font-style:italic;
+	font-size:14px;
+}
+
+label span.description {
+	color:#999;
+}
+
+#pass-strength-result {
+	width:200px;
+	margin:5px 0;
+	padding:2px 0;
+	border:1px solid #CCC;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background:#EEE;
+	text-align:center;
+}
+
+.short {
+	background:#F66 !important;
+}
+
+.bad {
+	background:#FCC !important;
+}
+
+.good {
+	background:#FF9 !important;
+}
+
+.strong {
+	background:#CFC !important;
+}
+
+input[type=submit] {
+	padding:8px 24px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	font-style:italic;
+	cursor:pointer;
+}
+
+/* Create listing form */
+
+#create-listing {
+	margin:0 26px;
+	padding:0;
+}
+
+fieldset {
+	margin:0 0 30px 0;
+}
+
+#create-listing .featured-head {
+	height: 20px;
+	display:inline-block;
+	position: relative;
+	left: -40px;
+	top:0;
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-moz-border-radius-bottomright: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	text-transform: capitalize;
+}
+
+.featured-head h3 {
+	margin:0;
+	padding: 2px 15px 12px 60px;
+	font-size: 14px;
+	font-weight:bold;
+	line-height:16px;
+	background: url('images/left-hanger-triangle.png') no-repeat 0% 98%;
+}
+
+.form-field {
+	margin: 20px 0 20px 20px;
+	width: 75%;
+	position:relative;
+}
+
+#listing-map {
+	height: 198px;
+	margin-left:10px;
+	border: 1px solid #C2C1C2
+}
+
+#listing-find-on-map {
+	margin:5px 0 10px 0;
+}
+
+input[type="text"],
+textarea {
+	display: block;
+	clear: left;
+	font-style: normal;
+}
+
+#create-listing input[type="text"],
+#create-listing textarea,
+#create-listing select {
+	width: 90%;
+}
+
+textarea {
+	height: 250px;
+}
+
+#create-listing .phone label input[type="text"] {
+	width:239px;
+}
+
+#create-listing .listing-urls label span {
+	position:absolute;
+	top: 30px;
+	left: 10px;
+	color:#999;
+	font-size:12px;
+	font-style:normal;
+}
+
+#create-listing .listing-urls label input[type="text"] {
+	width:239px;
+}
+
+#create-listing .web label input[type="text"] {
+	width:206px;
+	padding-left:40px;
+}
+
+#create-listing .twitter label input[type="text"] {
+	width:224px;
+	padding-left:21px;
+}
+
+#create-listing .facebook label input[type="text"] {
+	width:156px;
+	padding-left:88px;
+}
+
+#create-listing .uploaded {
+	border: 1px solid #EBEBEB;
+	padding: 0 10px;
+	margin: 15px 0;
+	cursor: move;
+}
+
+#create-listing .uploaded input[type="text"] {
+  width: 300px;
+}
+
+.uploaded li:not(:first-child) {
+	border-top: 1px solid #EBEBEB;
+}
+
+#create-listing .images li {
+	overflow: hidden;
+}
+
+#create-listing .images li + li {
+	margin-top: 10px;
+}
+
+#create-listing .images a {
+	display: block;
+	float: left;
+	margin: 10px 10px 0 0;
+}
+
+#create-listing .images img {
+	max-width: 100px;
+	max-height: 100px;
+}
+
+#create-listing .image-delete {
+	float: right;
+	margin-top: 5px 10px;
+	color: #f00;
+}
+
+#create-listing .image-alt input {
+	display: inline;
+	width: 300px;
+}
+
+/* Editing Files */
+
+.clear-file {
+	margin-left: 5px;
+}
+
+.file-delete {
+	float: right;
+	margin: 5px 10px;
+	color: #f00;
+}
+
+.file-editor .file-title input {
+	display: inline;
+}
+
+.form-field.file-field {
+	margin: 5px 0px 5px 20px;
+}
+
+.field-info {
+	font-size: 0.8em;
+	margin: 3px 0px 10px 20px;
+}
+
+/* checkout and redirect messages */
+
+.order-summary {
+	padding:0 28px 70px 48px;
+}
+
+.order-summary table tr td {
+	padding:0 25px 5px 0;
+	font-size:14px;
+}
+
+.order-summary p {
+	margin: 20px 0 10px 0;
+	font-size:18px;
+}
+
+.order-summary form label {
+	margin:0 0 10px 0;
+	display:block;
+}
+
+.order-summary form select {
+	margin: 6px 0;
+	padding: 5px;
+	background: #F4F4F4; /* for non-css3 browsers */
+	/*
+	 * Why base64?
+	 * 
+	 * In a nutshell, it's being used to render gradients and rounded corners together for IE9 and older. You can read more here:
+	 * http://www.appthemes.com/support/faq/#css-base64
+	 */
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc5ODAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGNEY0RjQiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c5ODApIiAvPgo8L3N2Zz4=);
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#F4F4F4)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #ffffff,  #F4F4F4); /* for firefox 3.6+ */
+	border: 1px solid #C2C1C2;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #5E5E5E;
+	font-size: 13px;
+}
+
+.order-summary form input[type=submit] {
+	margin:0;
+}
+
+.redirect-text {
+	width:100%;
+	margin:40px 0;
+	padding: 10px 10px 10px 30px;
+	display:block;
+	background: transparent url(images/icon-tick.png) no-repeat left center;
+	font-size:18px;
+	font-weight: bold;
+}
+
+/* Edit profile */
+
+
+#login-form {
+	margin:0 26px;
+	padding:0;
+}
+
+#login-form fieldset {
+	margin:0 0 30px 0;
+}
+
+#login-form .form-field {
+	margin: 20px 0;
+	width: 75%;
+	position:relative;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"],
+#login-form textarea {
+	display: block;
+	clear: left;
+	width: 90%;
+}
+
+#login-form input[type="password"] {
+	width:200px;
+	display: block;
+	clear: left;
+}
+
+#login-form textarea {
+	height: 250px;
+}
+
+/* Login Form */
+
+#login-form.login-form input[type="text"] {
+	width:200px;
+	display: block;
+	clear: left;
+}
+
+
+/* WangGaurd Registration */
+
+#login-form.register-form p {
+	margin: 20px 0px 20px 20px;
+	position: relative;
+	width: 75%;
+}
+
+/* Password Strength Meter Description */
+#login-form p.description {
+	margin: 0;
+	position: relative;
+	width: 100%;
+}
+
+/* =========== [ 13. SIDEBAR ] =========== */
+
+#sidebar {
+	width:260px;
+	margin:15px -305px 22px 22px;
+	float:left;
+	position:relative;
+}
+
+#sidebar aside {
+	margin:0 0 15px 0;
+	position:relative;
+	clear:left;
+}
+
+#sidebar p {
+	margin: 10px 5px 0 5px;
+	line-height:18px;
+}
+
+#sidebar ul {
+	overflow:hidden;
+}
+
+#sidebar li {
+	margin:0 5px;
+	padding: 7px 5px 7px 12px;
+	border-bottom: 1px solid #DFDFDF;
+}
+
+#sidebar .section-head {
+	width:293px;
+	height: 35px;
+	margin: 10px 0;
+	position: relative;
+	display: inline-block;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-toprleft: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	-moz-box-shadow: 1px 1px 1px #DDD;
+	-webkit-box-shadow: 1px 1px 1px #DDD;
+	box-shadow: 1px 1px 1px #DDD;
+}
+
+#sidebar .section-head h3 {
+	width:244px;
+	margin:0;
+	padding: 7px 25px 17px 25px;
+	font-family: "Open Sans", Arial, sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	background: url('images/right-hanger-triangle.png') no-repeat bottom right;
+}
+
+
+/* Add listing button */
+
+#sidebar .widget_create_listing_button {
+	width:258px;
+	height:46px;
+	margin:10px 0;
+	overflow:hidden;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#sidebar .widget_create_listing_button a {
+	padding:12px 0 12px 50px;
+	border:0;
+	display:block;
+	font-size:18px;
+	font-weight:bold;
+	font-style:italic;
+	text-decoration:none;
+}
+
+/* Sidebar Map Listing */
+
+#sidebar #listing-map {
+	border: 1px solid #bdbcbd;
+}
+
+/* Vantage widget categories */
+
+.widget_listing_categories {
+	width: 266px;
+}
+
+.widget_listing_categories li {
+	width: 105px;
+	margin-right: 12px;
+	float: left;
+}
+
+.widget_listing_categories li {
+	padding: 7px 0 7px 7px;
+	border-bottom: 1px solid #DFDFDF;
+	background: transparent url('images/widget-dot.png') no-repeat 0 center;
+}
+
+/* Vantage widget recent reviews */
+
+#sidebar li.recent-review {
+	margin:10px 5px 20px 5px;
+	padding:0;
+	border: none;
+	background: none;
+}
+
+.widget_recent_reviews li.recent-review .review-author {
+	float: left;
+}
+
+.widget_recent_reviews li.recent-review .review-author img {
+	padding: 1px;
+	border: 1px solid #BDBCBD;
+}
+
+.widget_recent_reviews li.recent-review .review-content {
+	margin:0 0 0 60px;
+}
+
+.widget_recent_reviews li.recent-review h4.listing-title {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 4px;
+}
+
+span.reviewer-date {
+	color: #999;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 4px 0;
+	display:block;
+}
+
+.textwidget {
+	margin:10px;
+}
+
+/* Vantage Widget Connect */
+
+#sidebar .widget_connect .connect {
+	list-style: none;
+	margin-top: 10px;
+}
+
+#sidebar .widget_connect .connect li {
+	border-bottom: none;
+	float: left;
+	background: none;
+	padding: 0;
+	margin: 0 0 15px 32px;
+}
+
+#sidebar .widget_connect .connect li a:hover img,
+#sidebar .widget_connect .connect li a:active img {
+	border: none;
+}
+
+/* Vantage Sidebar Ad */
+#sidebar .widget_sidebar_ad {
+	margin: 20px 0;
+}
+
+#sidebar .widget_sidebar_ad img {
+	padding: 10px 10px 0;
+}
+
+/* Listings Pages Ad */
+
+#main .advert .widget_listings_ad,
+#main .advert .widget_text {
+	width: 468px;
+	margin: 15px auto 15px;
+	clear: both;
+}
+
+#main .advert .widget_text .textwidget {
+	margin: 0;
+}
+
+#main .advert .widget_listings_ad .section-head,
+#main .advert .widget_text .section-head {
+	height: auto;
+	margin: 0;
+	position: relative;
+	left: auto;
+	display: inline-block;
+	border: none;
+	background: auto;
+	background: none;
+	-webkit-border-radius: none;
+	-moz-border-radius: none;
+	border-radius: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+#main .advert .widget_listings_ad .section-head h3,
+#main .advert .widget_text .section-head h3 {
+	margin: 5px 0;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+/* =========== [ 14. 404 Page ] =========== */
+
+.error404 article {
+	margin: 26px;
+	padding: 0;
+	position: relative;
+}
+
+/* Refine search */
+
+#refine-search form div {
+	margin:5px 0 25px 0;
+}
+
+#refine-search form div label div {
+	margin:0;
+}
+
+#refine-search h4 {
+	font-size:14px;
+	font-weight: bold;
+	margin:0 0 10px 0;
+	padding:0 0 10px 0;
+	border-bottom:1px solid #DDD;
+}
+
+#refine-order label {
+	display: block;
+	clear right;
+}
+
+.range-input {
+	position: relative;
+	height: 25px;
+}
+
+.range-rail {
+	background: url('images/rail-x.png') repeat-x 0 -2px;
+	height: 10px;
+}
+
+.range-selection {
+	position: absolute;
+	background: #aaa;
+	height: 3px;
+	top: 5px;
+	border-top: 1px solid #999;
+}
+
+.range-handle {
+	display: block;
+	position: absolute;
+	top: 0px;
+	background: url('images/thumb.png') no-repeat 0 -12px;
+	width:14px;
+	height: 26px;
+	border-radius: 10px;
+	cursor: e-resize;
+}
+
+#refine-distance .radius-info-box {
+	padding: 3px;
+	border:1px solid #CCC;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background:#F3F3F3;
+	text-align:center;
+}
+
+#refine-search #refine-categories {
+	margin-bottom:10px;
+	padding-bottom: 25px;
+	border-bottom: 1px solid #CCC;
+}
+
+#sidebar #refine-categories ul {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+
+#sidebar #refine-categories ul li {
+	margin:0;
+	padding:0;
+	border:0;
+	background:none;
+}
+
+/* =========== [ 15. DASHBOARD ] =========== */
+
+#main .featured-head.post-status-pending-head {
+	left: -40px;
+}
+
+#main .featured-head.post-status-pending-claimed-head {
+	left: -40px;
+}
+
+#main .featured-head.post-status-publish-head {
+	left: -40px;
+}
+
+.dashboard-expiration-meta {
+	position: absolute;
+	right: 0px;
+	top: -26px;
+	text-align: right;
+}
+.dashboard-review {
+	padding: 10px 0px;
+	margin: 10px 35px;
+	border-bottom: 1px solid #E5E5E5;
+	overflow: hidden;
+}
+
+.dashboard-review .review-listing {
+	width: 400px;
+	float: left;
+	clear: left;
+}
+
+.dashboard-review .review-listing h2 {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.dashboard-review .review-listing p.listing-cat,
+.dashboard-review .review-listing p.listing-phone {
+	float: left;
+	margin-right: 16px;
+	color: #888;
+}
+
+.dashboard-review .review-listing p.listing-address {
+	float: left;
+	clear: both;
+	margin-right: 16px;
+	color: #383838;
+}
+
+.dashboard-review .review-listing .review-meta {
+	width: 400px;
+	float: left;
+	clear: both;
+	margin: 15px 0;
+}
+
+.dashboard-review .review-listing .review-meta .stars-cont {
+	margin-right: 10px;
+	float: left;
+}
+
+.dashboard-review .review-listing .review-meta p.reviews {
+	margin: 0;
+	float: left;
+
+}
+
+.dashboard-review .review-manage {
+	width: 130px;
+	float: right;
+	clear: right;
+}
+
+.dashboard-review .review-content {
+	width: 100%;
+	float: left;
+	clear: both;
+}
+
+#main .featured-head.post-status-expired-head {
+	/* !TODO  -  define colors for expired! */
+	border: 1px solid #666;
+	left: -40px;
+	background: #999; /* for non-css3 browsers */
+	/*
+	 * Why base64?
+	 * 
+	 * In a nutshell, it's being used to render gradients and rounded corners together for IE9 and older. You can read more here:
+	 * http://www.appthemes.com/support/faq/#css-base64
+	 */
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc5MCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj4KPHN0b3Agc3RvcC1jb2xvcj0iI0NDQ0NDQyIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzk5OTk5OSIgb2Zmc2V0PSIxIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZzkwKSIgLz4KPC9zdmc+);
+	background: -webkit-gradient(linear, left top, left bottom, from(#CCCCCC), to(#999999)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #CCCCCC,  #999999); /* for firefox 3.6+ */
+}
+
+
+#main .featured-head.post-status-expired-head h3 {
+	color: #FFF;
+	-moz-text-shadow: 0 1px 0 #666666;
+	-webkit-text-shadow: 0 1px 0 #666666;
+	text-shadow: 0 1px 0 #666666;
+}
+
+.dashboard-none {
+	margin-left: 26px;
+}
+
+/* Dashboard Sidebar */
+
+#dashboard-side-nav li {
+	width: 100px;
+	padding: 5px 0 5px 10px;
+	border: none;
+	float: left;
+	text-indent: 14px;
+}
+
+#dashboard-side-nav li.edit-profile {
+	background: transparent url('images/tiny-edit-profile-icon.png') no-repeat 0 5px;
+}
+
+#dashboard-side-nav li.view-listings {
+	background: transparent url('images/tiny-listings-icon.png') no-repeat 0 5px;
+}
+
+#dashboard-side-nav li.reviews {
+	background: transparent url('images/tiny-reviews-icon.png') no-repeat 0 5px;
+}
+
+#dashboard-side-nav li.faves{
+	background: transparent url('images/faves.png') no-repeat 0 5px;
+}
+
+#dashboard-side-nav li.add-listings {
+	background: transparent url('images/tiny-add-listings-icon.png') no-repeat 0 5px;
+}
+
+#dashboard-side-nav li.claimed-listings {
+	background: transparent url('images/icon-meta-author.png') no-repeat 0 5px;
+	width: 115px;
+}
+
+#dashboard-side-nav div.avatar {
+	width: 45px;
+	height: 45px;
+	border: 1px solid #C1C1C1;
+	background:#FFF;
+	float: left;
+	padding: 2px;
+}
+
+#dashboard-side-nav .user_meta {
+	float: left;
+	margin: 0 5px;
+}
+
+#dashboard-side-nav .user_meta p {
+	font-size: 12px;
+}
+
+#dashboard-side-nav .user_meta p b {
+	font-weight: bold;
+}
+
+#dashboard-side-nav .user_meta p.smaller {
+	font-size: 10px;
+}
+
+#dashboard-side-nav .links {
+	clear: both;
+	float: left;
+	margin: 10px 5px;
+	width: 100%;
+}
+
+#dashboard-side-nav .separator {
+	height: 1px;
+	border-bottom: 1px solid #C6C6C6;
+	width: 100%;
+	clear: both;
+}
+
+#dashboard-acct-info .links li {
+	height: 13px;
+	background: none;
+	margin: 0 10px;
+	padding: 5px 0;
+	border: 0;
+	text-indent: 25px;
+}
+
+#dashboard-acct-info .links li.email {
+	background: transparent url('images/tiny-email-icon.png') no-repeat 0 7px;
+}
+
+#dashboard-acct-info .links li.twitter {
+	background: transparent url('images/tiny-twitter-icon.png') no-repeat 0 7px;
+}
+
+#dashboard-acct-info .links li.facebook {
+	background: transparent url('images/tiny-facebook-icon.png') no-repeat 0 7px;
+}
+
+#dashboard-acct-info .links li.website {
+	background: transparent url('images/tiny-website-icon.png') no-repeat 0 7px;
+}
+
+
+#dashboard-acct-stats .stats {
+	width: 110px;
+	margin:0 10px;
+	float: left;
+}
+
+#dashboard-acct-stats .stats li {
+	width: 120px;
+	background: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+/* =========== [ 16. PRICING PLANS ] =========== */
+
+.plan{
+	border: 1px solid #CCC;
+	margin: 5px;
+	padding: 3px;
+	font-size: 13px;
+	position: relative;
+}
+
+.plan:after {
+	content: "";
+	position: absolute;
+	top: 106px;
+	right: -10px;
+	border-top: 10px solid #000;
+    border-right: 10px solid transparent;
+}
+
+.plan .content{
+	background-color: #EEEEEF;
+	padding: 8px;
+	min-height: 95px;
+}
+
+.plan .title{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.plan .description{
+	font-style: italic;
+	margin-bottom: 10px;
+	padding-right: 190px;
+	width: auto;
+}
+
+.plan .featured-options {
+	padding-right: 190px;
+}
+
+.plan .option-header{
+	font-weight: bold;
+	margin-bottom: 2px;
+}
+
+.plan .price-box{
+	position: absolute;
+	top: 10px;
+	right: -10px;
+	background-color: white;
+	padding: 10px;
+	padding-right: 0px;
+	border: 1px solid #CCC;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.plan .price-box .price{
+	color: #0066CC;
+	font-size: 40px;
+	float: left;
+	margin-right: 5px;
+}
+
+.plan .price-box .duration{
+	margin-top: 4px;
+	font-size: 15px;
+	float: left;
+}
+
+.plan .price-box .radio-button{
+	background-color: #CCC;
+	clear: both;
+	padding: 5px;
+	padding-right: 20px;
+	font-weight: bold;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.plan .price-box .radio-button label{
+	font-style: normal;
+}
+	
+/* =========== [ 17. CATEGORIES LIST PAGE ] =========== */
+
+.categories-list {
+	border: 0 none;
+	margin: 0;
+	padding: 0px 28px 45px;
+	position: relative;
+}
+
+.categories-list .catcol {
+	border-left: medium none;
+	float: left;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 0 20px 0 15px;
+	vertical-align: top;
+	width: 350px;
+}
+
+.categories-list .catcol ul {
+	background: none repeat scroll 0 0 transparent;
+	-khtml-border-radius: 0 0 0 0;
+	-moz-border-radius: 0 0 0 0;
+	-webkit-border-radius: 0 0 0 0;
+	border-radius: 0 0 0 0;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-khtml-box-shadow: none;
+	box-shadow: none;
+	height: auto;
+	margin: 0;
+	overflow: hidden;
+	position: relative;
+}
+
+.categories-list .catcol li {
+	border-left: medium none;
+	border-right: medium none;
+	float: left;
+	height: auto;
+	position: relative;
+	top: 0;
+}
+
+.categories-list .catcol ul.maincat-list li {
+	background: url("images/gray-grad.png") repeat-x scroll left top transparent;
+	-khtml-border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+	margin: 10px 0 0;
+	width: 100%;
+}
+
+.categories-list .catcol ul li.maincat a {
+	border-right: medium none;
+	color: #545454;
+	display: inline-block;
+	float: none;
+	font-weight: bold;
+	height: auto;
+	margin: 0;
+	padding: 5px 3px 5px 7px;
+	text-align: left;
+	text-transform: uppercase;
+	width: auto;
+}
+
+.categories-list .catcol ul li.maincat a:hover {
+	text-decoration: underline;
+}
+
+.categories-list .catcol ul.subcat-list {
+	margin-left: 15px;
+	margin-top: 2px;
+}
+
+.categories-list .catcol ul.subcat-list li {
+	background: none repeat scroll 0 0 transparent;
+	margin: 0;
+}
+
+.categories-list .catcol ul li.cat-item a {
+	background: none repeat scroll 0 0 transparent;
+	display: inline-block;
+	font-size: 12px;
+	line-height: 22px;
+	padding: 0;
+	text-transform: none;
+	width: auto;
+}
+
+.categories-list .catcol ul li.cat-item a:hover {
+	text-decoration: underline;
+}
+
+/* =========== [ 18. FOOTER ] =========== */
+
+#footer {
+	min-height: 245px;
+	background: url('images/footer-bg.png') repeat 0 0;
+	overflow:hidden;
+	color:#757575;
+	line-height:21px;
+}
+
+#footer ul {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+
+#footer ul li {
+	padding:0 0 0 24px;
+	background:url(images/bullet4.gif) no-repeat 0 5px;
+}
+
+#footer .widget_recent_reviews ul li {
+	background: none;
+	padding: 0;
+}
+
+#footer .widget {
+	width:20%;
+	margin:25px 2.5%;
+	float:left;
+}
+
+#footer .section-head {
+	margin:0;
+	padding:0 0 15px 0;
+	background:url(images/bg-footer-heading.gif) no-repeat bottom center;
+}
+
+#footer .section-head h3 {
+	margin:0;
+	padding:0 0 12px 0;
+	border-bottom:1px solid #2A2A2A;
+	color:#FFF;
+	font-size:24px;
+	font-weight:normal;
+}
+
+#footer .widget_sidebar_ad img {
+	width:100%;
+	max-width:250px;
+}
+
+#post-footer {
+	margin:0;
+	padding:25px 0;
+	background: #E5E5E5 url('images/post-footer-bg.png') no-repeat center 0px;
+	text-align:center;
+	color:#666;
+}
+
+#post-footer a {
+	color:#666;
+}
+
+#post-footer .menu {
+	margin:0 auto 15px;
+}
+
+#post-footer .menu li {
+	display:inline;
+	margin:0 15px;
+}
+
+#post-footer .menu li ul,
+#post-footer .menu li div {
+	display: none;
+}
+
+#theme-info {
+	margin:15px 0 20px;
+	color:#999;
+	font-size:11px;
+}
+
+#theme-info a {
+	color:#999;
+}
+
+#footer .connect li {
+	margin-bottom:20px;
+	float:left;
+	background:none;
+}
+
+/* =========== [ 19. ADMIN BAR ] =========== */
+
+#wpadminbar * {
+	color: #2F2F2F;
+}
+
+#wpadminbar {
+	position:absolute;
+	top:0;
+	left:0;
+	border-bottom: 1px solid #888;
+}
+
+#wpadminbar,
+#wpadminbar .ab-top-secondary {
+	color: #2F2F2F;
+	background-color:#B8B8B8;
+	background-image:none;
+	text-shadow:none;
+}
+
+#wpadminbar .quicklinks .ab-top-menu > li > a,
+#wpadminbar .quicklinks .ab-top-menu > li > a span {
+	text-shadow:none;
+}
+
+#wpadminbar .quicklinks > ul > li.opposite > a,
+#wpadminbar .quicklinks .ab-top-secondary > li > a,
+#wpadminbar .quicklinks .ab-top-secondary > li > .ab-empty-item {
+	border-left: none;
+}
+
+#wpadminbar .quicklinks > ul > li.opposite {
+	border-left: 1px solid #D5D5D5;
+}
+
+#wpadminbar .quicklinks .ab-top-secondary > li {
+	border-left: 1px solid #9F9F9F;
+}
+
+#wpadminbar .quicklinks > ul > li > a {
+	border-right: none;
+}
+
+#wpadminbar .quicklinks > ul > li {
+	border-right: 1px solid #9F9F9F;
+}
+
+/*  TODO: */
+#wpadminbar .ab-top-menu>li>a:hover,
+#wpadminbar .ab-top-menu>li>a:hover span,
+#wpadminbar .ab-top-menu>li>a:focus,
+#wpadminbar .ab-top-menu>li>a:focus span {
+	color:#fafafa;
+}
+
+/*  TODO: */
+#wpadminbar .ab-top-menu>li:hover,
+#wpadminbar .ab-top-menu>li>a:focus {
+	background:#3a3a3a;
+	background-image:linear-gradient(bottom, #3a3a3a, #222);
+}
+
+/* New Login Form */
+#wp-admin-bar-bar-login {
+
+}
+
+#wpadminbar .quicklinks #wp-admin-bar-bar-login ul {
+	margin: 0;
+	border-right-width: 0px;
+}
+
+#wpadminbar .quicklinks #wp-admin-bar-bar-login-form a {
+	display: none;
+	visibility: hidden;
+}
+
+#wpadminbar .quicklinks .menupop #wp-admin-bar-bar-login-form:hover,
+#wpadminbar .quicklinks .menupop #wp-admin-bar-bar-login-form.hover{
+	background: none;
+}
+
+#wp-admin-bar-bar-login-form div#bar-login-form-cont {
+	margin: 0 15px 10px 15px;
+}
+
+#wp-admin-bar-bar-login-form label {
+	text-shadow: none;
+	color: #777;
+	font-size: 14px;
+}
+
+#wp-admin-bar-bar-login-form .forgetmenot {
+	float: left;
+	margin: 5px 0 0 1px;
+}
+
+#wp-admin-bar-bar-login-form label.rememberme {
+	font-size: 12px;
+	margin-left: 5px;
+}
+
+#wp-admin-bar-bar-login-form input[type="text"],
+#wp-admin-bar-bar-login-form input[type="password"] {
+	font-size: 17px;
+	outline: none;
+	color: #555;
+	margin-bottom: 10px;
+	padding: 3px;
+	background: inherit;
+	border: 1px solid #C2C1C2;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	text-shadow: none;
+}
+
+#wp-admin-bar-bar-login-form input[type="text"]:focus,
+#wp-admin-bar-bar-login-form input[type="password"]:focus {
+	border: 1px solid #888;
+}
+
+#wp-admin-bar-bar-login-form .submit {
+	float: right;
+	margin: 5px 0px 0 0;
+}
+
+#wp-admin-bar-bar-login-form #wp-submit {
+	position: relative;
+	cursor: pointer;
+	overflow: visible;
+	text-align: center;
+	white-space: nowrap;
+	background: #21759B;
+	/*
+	 * Why base64?
+	 * 
+	 * In a nutshell, it's being used to render gradients and rounded corners together for IE9 and older. You can read more here:
+	 * http://www.appthemes.com/support/faq/#css-base64
+	 */
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImczOCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzFENjM4NSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzI5OENCQSIgb2Zmc2V0PSIxIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZzM4KSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(bottom, #1D6385, #298CBA);
+	background: -webkit-gradient(linear, left bottom, left top, from(#1D6385), to(#298CBA));
+	padding: 3px 10px;
+	font: bold 12px sans-serif !important;
+	color: #FFF !important;
+	/* text-shadow: 0px 1px 0px #ddd !important; */
+	text-shadow: rgba(0,0,0,0.3) 0 -1px 0;
+	border: 1px solid #298CBA;
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	border-radius: 1em;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+}
+
+#wp-admin-bar-bar-login-form #wp-submit:active {
+	background: #21759B;
+	/*
+	 * Why base64?
+	 * 
+	 * In a nutshell, it's being used to render gradients and rounded corners together for IE9 and older. You can read more here:
+	 * http://www.appthemes.com/support/faq/#css-base64
+	 */
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc1NTYiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiMyOThDQkEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiMxRDYzODUiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c1NTYpIiAvPgo8L3N2Zz4=);
+	background: -moz-linear-gradient(bottom, #298CBA, #1D6385);
+	background: -webkit-gradient(linear, left bottom, left top, from(#298CBA), to(#1D6385));
+}
+
+#wp-admin-bar-bar-login-form #wp-submit:hover {
+	color: #EEE !important;
+}
+
+#wpadminbar .quicklinks #wp-admin-bar-bar-login #wp-admin-bar-lostpassword a {
+	padding-left: 15px;
+}
+
+
+/* Login form */
+
+#wpadminbar .ab-top-menu>li#wp-admin-bar-login {
+	border:0;
+}
+
+
+#wpadminbar .ab-top-menu>li#wp-admin-bar-login>.ab-item {
+	border:0;
+	padding-right:0;
+}
+
+#wpadminbar .ab-top-menu>li:hover#wp-admin-bar-login>.ab-item {
+	background-color:#B8B8B8;
+	background-image:none;
+	cursor:default;
+}
+
+#adminloginform p {
+	display: inline;
+	margin-right:10px;
+}
+
+#adminloginform p label {
+	color:#666;
+	text-shadow:none;
+}
+
+#adminloginform p label:hover {
+	cursor:default;
+}
+
+#adminloginform .login-username input,
+#adminloginform .login-password input {
+	width:120px;
+	font: 13px sans-serif;
+	height: 12px;
+	border:0;
+	padding:4px;
+	color: #333;
+	text-shadow:none;
+	background:#CCC;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+#adminloginform .login-username input:focus,
+#adminloginform .login-password input:focus {
+	background:#EEE;
+}
+
+#adminloginform #wp-submit {
+	position: relative;
+	cursor: pointer;
+	overflow: visible;
+	text-align: center;
+	white-space: nowrap;
+	background: #b3b3b3;
+	/*
+	 * Why base64?
+	 * 
+	 * In a nutshell, it's being used to render gradients and rounded corners together for IE9 and older. You can read more here:
+	 * http://www.appthemes.com/support/faq/#css-base64
+	 */
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc4NDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNCM0IzQjMiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNEREREREQiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c4NDApIiAvPgo8L3N2Zz4=);
+	background: -moz-linear-gradient(bottom, #B3B3B3, #DDD);
+	background: -webkit-gradient(linear, left bottom, left top, from(#B3B3B3), to(#DDD));
+	padding: 1px 10px;
+	font: bold 12px sans-serif !important;
+	color: #666 !important;
+	text-shadow: 0px 1px 0px #ddd !important;
+	border: 1px solid #888;
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	border-radius: 1em;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+}
+
+#adminloginform #wp-submit:active {
+	background: #CCC;
+	/*
+	 * Why base64?
+	 * 
+	 * In a nutshell, it's being used to render gradients and rounded corners together for IE9 and older. You can read more here:
+	 * http://www.appthemes.com/support/faq/#css-base64
+	 */
+	background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc3MTIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNDQ0NDQ0MiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNFRUVFRUUiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c3MTIpIiAvPgo8L3N2Zz4=);
+	background: -moz-linear-gradient(bottom, #CCC, #EEE);
+	background: -webkit-gradient(linear, left bottom, left top, from(#CCC), to(#EEE));
+	-moz-box-shadow: inset 2px 2px 0 rgba(0,0,0,0.2);
+	-webkit-box-shadow: inset 2px 2px 0 rgba(0,0,0,0.2);
+	box-shadow: inset 2px 2px 0 rgba(0,0,0,0.2);
+}
+
+#adminloginform #wp-submit:hover {
+	color: #000 !important;
+}
+
+#wp-admin-bar-register a {
+	font-weight: bold;
+}
+
+/* Social Connect plugin styling for admin bar */
+
+#bar-login-form-cont .social_connect_ui {
+	clear: left;
+}
+
+#wpadminbar .quicklinks #wp-admin-bar-bar-login-form .social_connect_ui a {
+	display: block;
+	visibility: visible;
+	height: auto;
+    padding: 0;
+    float: left;
+}
+
+#bar-login-form-cont div.social_connect_ui img {
+  border: 0px;
+  height: 32px;
+  width: 32px;
+}
+
+#bar-login-form-cont .social_connect_wordpress_form input {
+  height: 18px;
+}
+
+/* Lost Password */
+
+#wpadminbar .ab-top-menu>li#wp-admin-bar-lostpassword {
+	border:0;
+}
+
+#wpadminbar .ab-top-menu>li#wp-admin-bar-lostpassword>.ab-item {
+	color:#666;
+	padding-left:0;
+	padding-right:0;
+	text-shadow:none;
+}
+
+#wpadminbar .ab-top-menu>li:hover#wp-admin-bar-lostpassword>.ab-item {
+	background-color:#B8B8B8;
+	background-image:none;
+	color:#333;
+}
+
+
+/* =========== [ 20. IE Fixes ] =========== */
+
+/* IE 7 Fixes */
+/* Fix Dropdown menu displaying behind search divs */
+.ie7 #main-navigation .menu ul,
+.ie7 #main-navigation .menu li {
+	position: static;
+}
+
+/* Fixes width issue with headings spanning entire length */
+.ie7 #main .section-head,
+.ie7 article.post .post-heading,
+.ie7 .single-post article.post .post-heading,
+.ie7 #create-listing .featured-head {
+	display: block;
+	float: left;
+}
+
+.ie7 #main .section-head {
+	float: none;
+	display: inline;
+}
+
+.ie7 #create-listing .form-field {
+	clear: both;
+}
+
+/* Adjust placement of featured image on single listing page */
+.ie7 #listing-images .larger img {
+	max-width: 100%;
+}
+
+.ie7 #listing-images .larger img,
+.ie7 #listing-images .smaller img {
+	z-index: 1;
+}
+
+
+/* =========== [ 21. RESPONSIVE ] =========== */
+
+
+@media screen and (max-width: 1000px) {
+	input[type=text],
+	textarea {
+		max-width:93%;
+	}
+	
+	.row {
+		min-width: 1px;
+	}
+	
+/* header and main navigation */
+
+	#masthead .advert {
+		width:100%;
+		margin:20px 0 0 0;
+		position: relative;
+	}
+	
+	#masthead .advert .widget {
+		width: 470px;
+		margin:0 auto;
+	}
+	
+	.search-for, 
+	.search-location {
+		width:47.5%;
+	}
+	
+	.search-button {
+		height:auto;
+		margin-left:2%;
+	}
+	
+	#search-submit {
+		margin:0px 0;
+	}
+	
+/* listings */
+	
+	article.listing .review-meta {
+		float:none;
+		position:relative;
+	}
+	
+	article.listing .review-meta p {
+		float:none;
+	}
+	
+	article.listing .review-meta .stars-cont {
+		float:left;
+		margin:0 10px 0 0;
+	}
+	
+	.listing h2 {
+		margin:10px 0;
+		clear:left;
+		float:none;
+	}
+	
+	.dashboard-review .review-listing p.listing-cat,
+	article.listing p.listing-cat {
+		float:none;
+	}
+
+	/* fave buttons */
+	a.listing-fave-link,
+	a.listing-unfave-link {
+		display:inline-block;
+		margin:5px 0;
+		float:none;
+	}
+	
+	.listing-faves {
+		display:relative;
+		clear:both;
+	}
+	
+	div.content-listing.listing-faves .fave-button {
+		float:none;
+		clear:both;
+	}
+
+	.single-listing article.listing .listing-actions {
+		margin: 5px 0;
+	}	
+	
+	/* main content banner advert */
+	#main .advert .widget_listings_ad {
+		width:90%;
+		max-width:460px;
+	}
+	
+	#main .advert .widget_listings_ad img {
+		width:100%;
+	}
+
+/* blog and pages */
+
+	/* blog and page images */
+	article.page img,
+	.blog article.post img,
+	.single-post article.post img {
+		max-width:98%;
+		height:auto;
+	}
+
+	article.page img .wp-caption,
+	.blog article.post .wp-caption,
+	.single-post article.post .wp-caption {
+		max-width:98%;
+	}
+
+	article.page img .wp-caption img,
+	.blog article.post .wp-caption img,
+	.single-post article.post .wp-caption img {
+		max-width:80%;
+		height:auto;
+	}
+
+	/* blog comments */
+	.commentlist .comment-author {
+		float:none;
+	}
+	
+	.commentlist .comment-author cite {
+		float:none;
+	}
+
+	.commentlist .comment-body .comment-meta {
+		margin:10px 0;
+		float:none;
+	}
+
+/* forms */
+
+	.form-field {
+		width:90%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+
+/* header and main navigation */
+	
+	.search-for, .search-location {
+		width:99%;
+		float:none;
+	}
+	
+	#masthead .advert {
+		width:100%;
+		text-align:center;
+	}
+	
+	#masthead .advert .widget {
+		width:100%;
+		max-width:468px;
+		margin:0 auto;
+		text-align:left;
+	}
+	
+	#masthead .advert .widget img {
+		width:100%;
+	}
+
+/* adjust main content area so we can tuck sidebar underneath */
+	
+	#main {
+		float:none;
+	}
+	
+	#content-mid {
+		background-image:none;
+	}
+
+	#content-inner {
+		padding-right:0;
+	}
+
+/* categories page */
+
+	.categories-list .catcol {
+		width: 90%;
+		float:none;
+	}
+
+/* sidebar */
+
+	#sidebar {
+		width:auto;
+		margin:0 15px;
+		float:none;
+	}
+	
+	#sidebar .section-head {
+		width:100%;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+	}
+	
+	#sidebar .section-head h3 {
+		background-image: none;
+		padding: 7px;
+		overflow:hidden;
+	}
+	
+	.widget_listing_categories {
+		width:auto;
+	}
+	
+	#dashboard-acct-stats {
+		padding-bottom:40px;
+		overflow:hidden;
+		padding-right:5px;
+	}
+
+/* footer */
+
+	#footer .widget {
+		width:auto;
+		float:none;
+		clear:both;
+		overflow:hidden;
+	}
+	
+	#post-footer {
+		overflow:hidden;
+	}
+	
+	#post-footer .menu li a {
+		padding:10px;
+		display:inline-block;
+		font-size:16px;
+	}
+
+/* admin bar */
+	
+	#wpadminbar {
+		min-width:1px;
+		height:auto;
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+
+/* header and main navigation */
+
+	.search-for, .search-location {
+		width:96%;
+		min-width:1px;
+	}
+	
+	#main-search .search-title {
+		font-size: 16px;
+	}
+
+	/* tinynav navigation menu */
+	.tinynav {
+		display: block;
+	}
+
+	#navigation {
+		display: none;
+	}
+
+/* main content */
+
+	#main .section-head {
+		height:auto;
+		min-height: 40px;
+	}
+
+	#main .section-head h1,
+	#main .section-head h2 {
+		padding: 8px 27px;
+		background:none;
+	}
+
+/* listings */
+
+	article.listing {
+		padding: 25px 10px 25px 0;
+	}
+	
+	a.listing-fave-link, a.listing-unfave-link {
+		margin: 5px 0 0;
+	}
+	
+	.single-listing article.listing .listing-actions {
+		margin: 0 0 5px;
+	}
+	
+	.single-listing article.listing .listing-actions a {
+		clear: left;
+		margin-top: 4px; 
+	}
+
+	/* single listing images */
+	.home article.listing img,
+	.archive article.listing img{
+		display:none;
+	}
+	
+	article.listing.featured {
+		padding: 25px 10px 25px 25px;
+	}
+
+	article.listing.featured img {
+		display:none;
+	}
+	
+	#listing-images {
+		width:68px;
+	}
+	
+	#listing-images .larger {
+		padding:6px 6px 0 6px;
+		border:0;
+	}
+	
+	#listing-images .larger img {
+		width: 50px;
+		height: 50px;
+		padding: 2px;
+	}
+	
+	#listing-images .smaller {
+		margin:0;
+		padding:0 6px 6px 6px;
+	}
+	
+	#listing-images .smaller a + a {
+		margin:0;
+	}
+
+/* forms */
+	#create-listing .listing-urls label span {
+		display:none;
+	}
+	
+	#create-listing .phone label input[type="text"],
+	#create-listing .listing-urls label input[type="text"],
+	#create-listing .twitter label input[type="text"],
+	#create-listing .facebook label input[type="text"] {
+		width:100%;
+		padding-left:5px;
+	}
+
+/* sidebar */
+
+	#sidebar .section-head h3 {
+		width:auto;
+	}
+	
+	.widget_sidebar_ad img {
+		width:90%;
+		max-width:250px;
+		margin:0 auto;
+	}
+	
+	#sidebar .widget_create_listing_button {
+		max-width:100%;
+	}
+
+	#sidebar .widget_create_listing_button a {
+		padding:12px 0;
+		text-align:center;
+		background-image:none;
+	}
+
+/* admin bar */
+	
+	#masthead .row {
+		margin-top:40px;
+	}
+	
+	#wpadminbar {
+		height:auto;
+	}
+	
+	#wpadminbar .quicklinks > ul > li,
+	#wpadminbar .quicklinks > ul > li.opposite,
+	#wpadminbar .quicklinks .ab-top-secondary > li{
+		border:0;
+	}
+}
+
+@media screen and (max-width: 400px) {
+
+/* listings */
+
+	article.listing .review-meta {
+		width:auto;
+	}
+	
+	article.listing .review-meta .stars-cont {
+		float:none;
+	}
+	
+	/* single listing images */
+	#listing-images {
+		width:auto;
+		margin:0;
+		padding:0;
+		border:0;
+		float:none;
+		background-color:transparent;
+	}
+	
+	#listing-images .larger {
+		display:inline;
+		margin:0;
+		padding:0;
+		background-color:transparent;		
+	}
+	
+	#listing-images .smaller {
+		display:inline;
+		margin:0;
+		padding:0;
+		background-color:transparent;
+	}
+	
+	/* listing description and reviews */
+	#listing-tabs .tabs a {
+		padding: 10px 3px;
+	}
+	
+	#comments .social_connect_ui label {
+		width:100%;
+		display:block;
+	}
+	
+/* pricing plans */
+
+	.plan .content {
+		padding-top: 115px;
+	}
+	
+	.plan .description {
+		padding-right:20px;
+	}
+	
+	.plan .featured-options {
+		padding-right:20px;
+	}
+
+/* blog comments */
+	.single-post article.post ol.commentlist li {
+		padding:10px 0;
+	}
+	
+	.single-post article.post ol.commentlist li ul {
+		margin:10px 0 0 25px;
+	}
+	
+	.commentlist .comment-author img {
+		display:none;
+	}
+	
+	.commentlist .comment-body p,
+	.commentlist .comment-body .reply {
+		margin-left:0;
+	}
+
+/* sidebar */
+
+	#sidebar .section-head {
+		height:auto;
+		min-height: 35px;
+	}
+}
